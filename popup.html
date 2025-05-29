@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Data Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>YouTube Data Extractor</h1>
+            <div id="status" class="status"></div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="extract">Extract</button>
+            <button class="tab-btn" data-tab="analysis">Analysis</button>
+        </div>
+
+        <div class="tab-content active" id="extract">
+            <button id="extractBtn" class="primary-btn">Extract Video Data</button>
+            
+            <div id="loading" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Extracting data...</p>
+            </div>
+
+            <div id="error" class="error"></div>
+            
+            <div id="result" class="result">
+                <div class="result-section">
+                    <h3>Title</h3>
+                    <div class="content-wrapper">
+                        <p id="titleContent"></p>
+                        <button class="copy-btn" data-section="title">Copy</button>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <h3>Description</h3>
+                    <div class="content-wrapper">
+                        <p id="descriptionContent"></p>
+                        <button class="copy-btn" data-section="description">Copy</button>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <h3>Tags</h3>
+                    <div class="content-wrapper">
+                        <div id="tagsContent" class="tags-container"></div>
+                        <button class="copy-btn" data-section="tags">Copy</button>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <h3>Transcript</h3>
+                    <div class="content-wrapper">
+                        <div id="transcriptContent" class="transcript-container"></div>
+                        <button class="copy-btn" data-section="transcript">Copy</button>
+                    </div>
+                </div>
+
+                <button id="downloadBtn" class="secondary-btn" disabled>Download All Data</button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="analysis">
+            <div class="result-section">
+                <h3>AI Analysis</h3>
+                <div class="content-wrapper">
+                    <div id="analysisContent" class="analysis-container"></div>
+                    <button class="copy-btn" data-section="analysis">Copy</button>
+                </div>
+            </div>
+            <button id="analyzeBtn" class="primary-btn">Analyze with AI</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
